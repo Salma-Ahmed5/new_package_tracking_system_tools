@@ -11,6 +11,7 @@ mongoose.connect(
     "mongodb+srv://salmaamd505:Ng2J5BbUUo0N3hLt@cluster0.gsiu8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
+
   .then(() => {
       console.log("Successfully connected to the database");
   })
@@ -18,14 +19,8 @@ mongoose.connect(
       console.error("Error connecting to the database", error);
   });
 
-
-const User = mongoose.model('User', new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  phone: { type: String, required: true },
-  password: { type: String, required: true }
-}));
-
+  
+const User = require("./models/user");
 
 app.post('/register', async (req, res) => {
   const { name, email, phone, password } = req.body;
