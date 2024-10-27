@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div >
+    <div class="logo"><img src="../../assets/Images/Preview (4).svg"></div>
+    <table>
+        <form method="post" action="/Login">
+            <tr>
+                <td colspan="2">
+                    <h1 class="login">Sign in to your account</h1>
+                    <h5>Dont have an account? <a [routerLink]="['/Register']">Sign up here</a></h5> 
+                </td>
+            </tr>         
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" placeholder="Enter your email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" placeholder="Enter your password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="buttons">
+                        <span class="submit"> <button type="submit">Login</button></span>
+                    </div>
+                </td>
+            </tr>
+
+        </form>
+    </table>
+    </div>
+    
+</body>
+</html> 
